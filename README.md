@@ -10,6 +10,6 @@ A simple Web application for inference / demo of MNIST image classification neur
 
 
 
-![ScreenShot](flask_img_1.PNG?raw=true)
+![ScreenShot](flask_img_1.PNG?raw=true | width=100 | height=200)
 
 
