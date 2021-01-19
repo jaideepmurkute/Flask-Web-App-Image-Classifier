@@ -154,5 +154,5 @@ def predict_single(data):
     return torch.argmax(output_probs, dim=1)
 
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()
