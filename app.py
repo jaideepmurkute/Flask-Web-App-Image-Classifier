@@ -1,6 +1,5 @@
 from flask import Flask
 from mnist_classifier import predict_single
-app = Flask(__name__)
 import cv2
 from flask import request
 from flask import render_template
@@ -10,9 +9,9 @@ from PIL import Image
 from mnist_classifier import Net
 import torch
 from torchvision import datasets, transforms
-UPLOAD_FOLDER = './static/uploaded_images'
-
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+UPLOAD_FOLDER = './static/uploaded_images'
 
 
 def predict_single(data):
@@ -41,6 +40,7 @@ def predict():
 
 
 if __name__ == '__main__':
+    app = Flask(__name__)
     model = Net().to(device)
     model.to(device)
     model.load_state_dict(torch.load('./mnist_cnn.pt'))  # load trained model
